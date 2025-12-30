@@ -2,7 +2,7 @@
 
 **UW Tacoma | Winter 2026**
 
-## Assignment Guide
+## Assignment Instructions
 
 Full instructions available at:
 https://cfb3.github.io/TCSS305-GUIDES/assignments/a1a/
