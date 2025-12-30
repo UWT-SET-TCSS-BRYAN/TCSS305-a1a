@@ -5,7 +5,7 @@
 ## Assignment Guide
 
 Full instructions available at:
-https://uwt-set-tcss305-lecture-materials.github.io/TCSS305-GUIDES/
+https://cfb3.github.io/TCSS305-GUIDES/assignments/a1a/
 
 ## Project Structure
 
@@ -22,7 +22,7 @@ test/java/edu/uw/tcss/model/
 
 project root/
 ├── executive-summary.md   (your submission notes)
-└── environment-setup.md   (setup guide)
+└── README.md              (this file)
 ```
 
 ## Running Tests
