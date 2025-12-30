@@ -3,15 +3,19 @@ package edu.uw.tcss.model;
 import java.math.BigDecimal;
 
 /**
- * Represents a single item for sale. An Item is an immutable object.
+ * Represents a single item for sale in the bookstore.
  * <p>
- * Constructors and methods of this class throw NullPointerException if required
- * parameters are null.
+ * This interface defines the contract for all items, requiring them to know
+ * how to calculate their own total price (Information Expert pattern).
+ * Items handle their own pricing logic, removing the need for external code
+ * to know about bulk pricing or other pricing strategies.
+ * <p>
  *
  * @author Charles Bryan
- * @version Autumn 2023
+ * @version Winter 2025
  */
 public interface Item {
+
     /**
      * Returns the name for this Item.
      *
@@ -20,31 +24,34 @@ public interface Item {
     String getName();
 
     /**
-     * Returns the price for this Item.
+     * Returns the unit price for this Item.
+     * This is the price for a single unit, used for display.
      *
-     * @return the price for this Item
+     * @return the unit price for this Item
      */
     BigDecimal getPrice();
 
     /**
-     * Returns the bulk quantity for this Item.
+     * Calculates the total price for the given quantity of this item.
      *
-     * @return the bulk quantity for this Item
+     * @param quantity the quantity to calculate the total for
+     * @return the total price for the given quantity
+     * @throws IllegalArgumentException if quantity is negative
      */
-    int getBulkQuantity();
+    BigDecimal calculateTotal(int quantity);
 
     /**
-     * Returns the bulk price for this Item.
+     * Returns a formatted description of this item suitable for display in a GUI.
+     * <p>
+     * This method provides a human-readable representation of the item including
+     * its name, price, and (for bulk items) bulk pricing information. This is
+     * distinct from toString() which is intended for debugging purposes.
+     * <p>
+     * Format examples:
+     * - Simple item: "Computer Science Pen, $2.00"
+     * - Bulk item: "'Java Rules!' button, $0.95 (10 for $5.00)"
      *
-     * @return the bulk price for this Item
+     * @return a formatted string suitable for display to end users
      */
-    BigDecimal getBulkPrice();
-
-    /**
-     * Returns True if this Item has bulk pricing.
-     *
-     * @return True if this Item has bulk pricing; false otherwise
-     */
-    boolean isBulk();
-
+    String getFormattedDescription();
 }

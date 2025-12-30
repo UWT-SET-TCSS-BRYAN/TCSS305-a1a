@@ -1,9 +1,5 @@
 package edu.uw.tcss.app;
 
-import edu.uw.tcss.model.StoreItem;
-
-import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -11,15 +7,9 @@ import java.util.logging.Logger;
  * A driver class for this application.
  *
  * @author Charles Bryan
- * @version Autumn 2024
+ * @version Autumn 2025
  */
-public class StarterApplication {
-
-    // TODO: read and complete all TODOs. Once completed, remove all TODO comments.
-
-    // TODO: Right-click on this file -> Analyze -> Inspect Code : then clean up all warnings
-
-    // TODO: In the file menu, View -> Tool Windows -> TODO
+public final class StarterApplication {
 
     /**
      * A Logger object for all your logging needs.
@@ -34,11 +24,19 @@ public class StarterApplication {
     }
 
     /**
+     * Private constructor to prevent instantiation.
+     */
+    private StarterApplication() {
+        super();
+        // Utility class - prevent instantiation
+    }
+
+    /**
      * The entry point into this application.
      *
      * @param theArgs the command-line arguments for this program.
      */
-    public static void main(final String[] theArgs) {
+    static void main(final String[] theArgs) {
         // TODO read, review, then delete the following 4 LOGGER method calls.
         LOGGER.info(() -> "Should you need String concatenation,  "
                 + "use a lambda for lazy evaluation. What's that you ask?");
@@ -51,8 +49,16 @@ public class StarterApplication {
         System.out.println("This should not be used unless this is an actual console application!");
     }
 
-    public static boolean isBlue(String theInput) {
-        return theInput.equalsIgnoreCase("BLUE");
+
+
+    /**
+     * Determines if the input string is "BLUE" (case-insensitive).
+     *
+     * @param theInput the string to check
+     * @return true if the input is "BLUE", false otherwise
+     */
+    public static boolean isBlue(final String theInput) {
+        return "BLUE".equalsIgnoreCase(theInput);
     }
 
 }

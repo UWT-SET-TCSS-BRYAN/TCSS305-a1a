@@ -1,47 +1,29 @@
-
 package edu.uw.tcss.model;
 
 import java.math.BigDecimal;
 
+public class StoreItem implements Item {
 
-public final class StoreItem implements Item {
-
-
-    public StoreItem(final String name, final BigDecimal price) {
-
-    }
-
-    public StoreItem(final String name, final BigDecimal price, final int bq,
-                     final BigDecimal bp) {
-    }
-
+    public StoreItem(final String theName, final BigDecimal thePrice) {
+     }
 
     public String getName() {
         return null;
     }
 
-
     public BigDecimal getPrice() {
         return null;
     }
 
-
-    public int getBulkQuantity() {
-        return 0;
-    }
-
-
-    public BigDecimal getBulkPrice() {
+    public BigDecimal calculateTotal(final int theQuantity) {
         return null;
     }
 
-
-    public boolean isBulk() {
-        return false;
+    public String getFormattedDescription() {
+        return null;
     }
 
     public String toString() {
         return null;
     }
-
 }
