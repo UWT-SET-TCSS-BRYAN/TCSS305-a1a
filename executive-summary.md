@@ -1,6 +1,6 @@
 # TCSS305 Executive Summary
 
-[Assignemnt Name]
+[Assignment Name]
 
 [Your Name]
 
