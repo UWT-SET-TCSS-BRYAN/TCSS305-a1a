@@ -86,7 +86,13 @@ class StarterApplicationTest {
 
     /**
      * Test isBlue returns false for a null input rather than throwing.
+     * <p>
+     * IntelliJ's ConstantValue inspection can prove this call returns false and
+     * would otherwise flag the assertion. The check is deliberate: it guards the
+     * null contract against a regression such as switching to
+     * input.equalsIgnoreCase("BLUE"), which throws instead of returning false.
      */
+    @SuppressWarnings("ConstantValue")
     @Test
     void testIsBlueNull() {
         assertFalse(StarterApplication.isBlue(null),
