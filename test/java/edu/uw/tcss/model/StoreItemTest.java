@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
  * Unit tests for the StoreItem class.
  *
  * @author Charles Bryan
- * @version Winter 2026
+ * @version Autumn 2026
  */
 class StoreItemTest {
 
