@@ -13,7 +13,7 @@ public final class StarterApplication {
         LOGGER.setLevel(Level.ALL);
     }
 
-    static void main(final String[] theArgs) {
+    static void main(final String[] args) {
         // TODO read, review, then delete the following 4 LOGGER method calls.
         LOGGER.info(() -> "Should you need String concatenation,  "
                 + "use a lambda for lazy evaluation. What's that you ask?");
@@ -27,8 +27,8 @@ public final class StarterApplication {
     }
 
 
-    public static boolean isBlue(final String theInput) {
-        return theInput == "blue";
+    public static boolean isBlue(final String input) {
+        return input == "blue";
     }
 
 }
