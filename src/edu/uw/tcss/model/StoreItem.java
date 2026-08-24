@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 
 public class StoreItem implements Item {
 
-    public StoreItem(final String theName, final BigDecimal thePrice) {
-     }
+    public StoreItem(final String name, final BigDecimal price) {
+    }
 
     public String getName() {
         return null;
@@ -15,7 +15,7 @@ public class StoreItem implements Item {
         return null;
     }
 
-    public BigDecimal calculateTotal(final int theQuantity) {
+    public BigDecimal calculateTotal(final int quantity) {
         return null;
     }
 

@@ -8,7 +8,7 @@ import java.math.BigDecimal;
  * This interface defines the contract for all items, requiring them to know
  * how to calculate their own total price (Information Expert pattern).
  * Items handle their own pricing logic, removing the need for external code
- * to know about bulk pricing or other pricing strategies.
+ * to know how an item's price is calculated.
  * <p>
  *
  * @author Charles Bryan
@@ -44,12 +44,10 @@ public interface Item {
      * Returns a formatted description of this item suitable for display in a GUI.
      * <p>
      * This method provides a human-readable representation of the item including
-     * its name, price, and (for bulk items) bulk pricing information. This is
-     * distinct from toString() which is intended for debugging purposes.
+     * its name and price. This is distinct from toString() which is intended
+     * for debugging purposes.
      * <p>
-     * Format examples:
-     * - Simple item: "Computer Science Pen, $2.00"
-     * - Bulk item: "'Java Rules!' button, $0.95 (10 for $5.00)"
+     * Format example: "Computer Science Pen, $2.00"
      *
      * @return a formatted string suitable for display to end users
      */
