@@ -114,7 +114,8 @@
 
     <!-- Modern Java naming -->
     <module name="LambdaParameterName">
-      <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+      <!-- '_' is a legal unnamed parameter as of Java 22 (JEP 456) -->
+      <property name="format" value="^(_|[a-z][a-zA-Z0-9]*)$"/>
     </module>
 
     <module name="PatternVariableName">
