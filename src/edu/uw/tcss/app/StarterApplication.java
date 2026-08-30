@@ -3,6 +3,7 @@ package edu.uw.tcss.app;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+// TODO add a class Javadoc comment here, including @author and @version tags.
 public final class StarterApplication {
 
     public static final Logger LOGGER = Logger.getLogger(StarterApplication.class.getName());
@@ -13,6 +14,7 @@ public final class StarterApplication {
         LOGGER.setLevel(Level.ALL);
     }
 
+    // Java 25 allows main to be declared without public. See JEP 512.
     static void main(final String[] args) {
         // TODO read, review, then delete the following 4 LOGGER method calls.
         LOGGER.info(() -> "Should you need String concatenation,  "
@@ -27,6 +29,11 @@ public final class StarterApplication {
     }
 
 
+    // Contract: isBlue returns true when its argument reads "blue" in any mix of upper
+    //  and lower case. It returns false for anything else, including null. It never
+    //  throws. (Same contract as Requirement 3 on the assignment page.)
+    // TODO make the code below match that contract, then replace this comment with a
+    //  proper Javadoc comment.
     public static boolean isBlue(final String input) {
         return input == "blue";
     }

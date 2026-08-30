@@ -2,6 +2,7 @@ package edu.uw.tcss.model;
 
 import java.math.BigDecimal;
 
+// TODO add a class Javadoc comment here, including @author and @version tags.
 public class StoreItem implements Item {
 
     public StoreItem(final String name, final BigDecimal price) {

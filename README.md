@@ -10,22 +10,28 @@ https://cfb3.github.io/TCSS305-26-AUTUMN/assignments/a1a/
 ## Project Structure
 
 ```
-src/edu/uw/tcss/
-├── app/
-│   └── StarterApplication.java
-└── model/
-    ├── Item.java          (interface - do not modify)
-    └── StoreItem.java     (implement this)
-
-test/java/edu/uw/tcss/
-├── app/
-│   └── StarterApplicationTest.java  (do not modify)
-└── model/
-    └── StoreItemTest.java           (do not modify)
-
-project root/
-├── executive-summary.md   (your submission notes)
-└── README.md              (this file)
+a1a-<your-username>/
+├── src/                          ← Source code
+│   └── edu/uw/tcss/
+│       ├── app/
+│       │   └── StarterApplication.java
+│       ├── model/
+│       │   ├── Item.java             (interface - provided)
+│       │   └── StoreItem.java        (implement this)
+│       └── WRONG/                    (delete after verification)
+│           ├── checkstyleRuleBreaker.java
+│           └── InspectionTester.java
+├── test/                         ← Unit tests
+│   └── java/edu/uw/tcss/
+│       ├── app/
+│       │   └── StarterApplicationTest.java  (provided tests)
+│       └── model/
+│           └── StoreItemTest.java           (provided tests)
+├── .idea/                        ← Checkstyle + inspection rules (do not edit)
+├── .gitignore                    ← Files Git should not track
+├── LICENSE                       ← Course license
+├── README.md                     ← Links to assignment on course site
+└── executive-summary.md          ← Your submission notes
 ```
 
 ## Running Tests
